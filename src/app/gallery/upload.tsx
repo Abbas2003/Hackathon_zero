@@ -24,7 +24,7 @@ const Upload = () => {
           router.refresh()
         }, 1000)
        }}
-      uploadPreset="giomsr4s"
+      uploadPreset="m7lpw3gk"
     >
       <div className="flex gap-2">
         <svg

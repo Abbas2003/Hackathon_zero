@@ -10,7 +10,7 @@ const Page = async ({ params }: { params: { pictures: string } }) => {
   let res = (await cloudinary.v2.search
     .expression(`resource_type:image AND folder=${params.pictures}`)
     .sort_by("created_at", "desc")
-    .max_results(5)
+    .max_results(30)
     .with_field("tags")
     .execute()) as { resources: ImageType[] };
 

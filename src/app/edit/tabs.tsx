@@ -114,7 +114,7 @@ export function TabsDemo({ src }: { src: string }) {
             src={src}
             sizes="100vw"
             alt="Img"
-            effects={[{vignette: 60}]}
+            vignette='60'
           />
         </div>
       </TabsContent>
