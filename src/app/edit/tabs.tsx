@@ -2,9 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CldImage } from "next-cloudinary";
+import { CldImage  } from "next-cloudinary";
 
 export function TabsDemo({ src }: { src: string }) {
+  
+  const CImage =   CldImage as any
+
   return (
     <Tabs defaultValue="original" className="w-full px-4 py-5">
       <TabsList className="grid w-full grid-cols-5">
@@ -108,14 +111,14 @@ export function TabsDemo({ src }: { src: string }) {
             sizes="100vw"
             alt="Img"
           />
-          <CldImage
+          {<CImage
             width="250"
             height="250"
             src={src}
             sizes="100vw"
             alt="Img"
             vignette='60'
-          />
+          /> }
         </div>
       </TabsContent>
     </Tabs>

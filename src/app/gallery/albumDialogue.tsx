@@ -28,7 +28,7 @@ const AlbumDialogue = ({imageData}: {imageData: string}) => {
           <DialogHeader>
             <DialogTitle>Add to Album</DialogTitle>
             <DialogDescription>
-              Enter the album name. Click save when you're done.
+             {` Enter the album name. Click save when you're done.`}
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">

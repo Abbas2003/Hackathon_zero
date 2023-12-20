@@ -1,30 +1,16 @@
 "use client";
-import { CldUploadButton } from "next-cloudinary";
-import { CldImage } from "next-cloudinary";
-import { useState } from "react";
-import View from "./gallery/view";
 
-
-interface UploadImage {
-  event: "success";
-  info: {
-    public_id: string;
-  }
-}
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/gallery")
+  },[]);
   // useState hook to change the image
-  const [imgId, setImgId] = useState("")
 
   return (
-    <main className="flex min-h-screen flex-col items-center my-5 p-24 text-xl font-extrabold">
-      
-      {/* Upload btn */}
-      <CldUploadButton uploadPreset="m7lpw3gk" onUpload={(result)=>{
-       let response = result as UploadImage
-       setImgId(response.info.public_id)
-      }}/>
-      
-    </main>
+    <main className="flex min-h-screen flex-col items-center my-5 p-24 text-xl font-extrabold"></main>
   );
 }
